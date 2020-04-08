@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\admin\gcsRequest;
 use App\Models\Doctor;
 use App\Models\Service;
 use App\Models\User;
@@ -61,7 +62,7 @@ class guaranteeCertificateController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(gcsRequest $request)
     {
         $gc = $this->repository->create($request);
         if ($request->ajax()){
