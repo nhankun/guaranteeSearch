@@ -14,6 +14,10 @@
         <!-- Modal body -->
         <div class="modal-body">
             <div class="form-group">
+                <label for="id_guarantee">id_guarantee:</label>
+                <input type="text" name="id_guarantee" class="form-control" placeholder="Enter id_guarantee" id="id_guarantee">
+            </div>
+            <div class="form-group">
                 <label for="start_day">start_day:</label>
                 <input type="text" name="start_day" class="form-control" placeholder="Enter start day" id="start_day">
             </div>

@@ -33,16 +33,5 @@ class Helper
         $map = array_merge($map, $default);
         return strtoupper(preg_replace(array_keys($map), array_values($map), $str));
     }
-
-    public static function makeIdGuaranteeIncreases($id = 0)
-    {
-        if ($id != 0){
-            $arrId = explode('-',$id);
-            $arrId[1] += 1;
-            return implode('-',$arrId);
-        }else{
-            return 'VIN-000001';
-        }
-    }
 }
 

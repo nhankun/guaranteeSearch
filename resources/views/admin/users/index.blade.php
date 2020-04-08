@@ -79,6 +79,10 @@
                         $('#btnsearch').focus().click();
                     }
                 })
+
+                $('.btn_add_user').on('click',function () {
+                    alert('s')
+                });
             }
 
             return {

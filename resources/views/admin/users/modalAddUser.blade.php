@@ -48,7 +48,7 @@
 
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button type="submit" class="btn btn-primary">Xác nhận</button>
+          <button type="submit" class="btn btn-primary btn_add_user">Xác nhận</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
         </div>
       </form>

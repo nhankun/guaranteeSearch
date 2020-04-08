@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\admin\UserRequest;
 use App\Repositories\admin\UserRepository;
 use Illuminate\Http\Request;
 
@@ -56,7 +57,7 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserRequest $request)
     {
         $user = $this->repository->create($request->all());
         if ($request->ajax()){
@@ -100,7 +101,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UserRequest $request, $id)
     {
         $user = $this->repository->update($request->all(),$id);
         if ($request->ajax()){

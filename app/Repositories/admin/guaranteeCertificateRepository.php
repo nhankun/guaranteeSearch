@@ -2,7 +2,6 @@
 namespace App\Repositories\admin;
 
 use App\Models\guaranteeCertificate;
-use App\Services\Helper;
 
 class guaranteeCertificateRepository
 {
@@ -20,13 +19,13 @@ class guaranteeCertificateRepository
 
     public function create($params)
     {
-        $params['id_guarantee'] = Helper::makeIdGuaranteeIncreases();
+        $params['id_guarantee'] = 'VIN-'.$params['id_guarantee'];
         return guaranteeCertificate::create($params);
     }
 
     public function update($params, $id)
     {
-        $params['id_guarantee'] = Helper::makeIdGuaranteeIncreases($params['id_guarantee']);
+        $params['id_guarantee'] = 'VIN-'.$params['id_guarantee'];
         $gc = $this->getById($id);
         return $gc->update($params);
     }
