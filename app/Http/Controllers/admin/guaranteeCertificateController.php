@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Doctor;
+use App\Models\Service;
+use App\Models\User;
 use App\Repositories\admin\guaranteeCertificateRepository;
 use Illuminate\Http\Request;
 
@@ -46,7 +49,10 @@ class guaranteeCertificateController extends Controller
      */
     public function create()
     {
-        //
+        $users = User::all();
+        $services = Service::all();
+        $doctors = Doctor::all();
+        return view('admin.gcs.create',compact(['users','services','doctors']));
     }
 
     /**
@@ -57,7 +63,7 @@ class guaranteeCertificateController extends Controller
      */
     public function store(Request $request)
     {
-        $gc = $this->repository->create($request->all());
+        $gc = $this->repository->create($request);
         if ($request->ajax()){
             return response()->json([
                 'success' => true,

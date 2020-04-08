@@ -10,4 +10,9 @@ class guaranteeCertificate extends Model
         'id_guarantee', 'start_day', 'end_day', 'user_id', 'service_id', 'doctor_id', 'tooth_unit', 'note',
         'image_before', 'image_doing', 'image_complete'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class,'user_id','id');
+    }
 }

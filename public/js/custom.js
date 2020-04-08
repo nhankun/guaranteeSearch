@@ -4,7 +4,9 @@
 
 $(document).ready(function(){
 
-$('.datetimepickers').datepicker();
+$('.datetimepickers').datepicker({
+    dateFormat: 'dd-mm-yy'
+});
 
 // ------------------ End Document ------------------ //
 });

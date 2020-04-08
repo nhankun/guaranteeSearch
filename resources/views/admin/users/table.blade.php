@@ -6,6 +6,6 @@
         <td>{!! $user->identity_card !!}</td>
         <td>{!! $user->address !!}</td>
         <td>{!! $user->gender !!}</td>
-        <td></td>
+        <td><a href="{{ route('users.edit', $user->id) }}" class="btn btn-info">Sửa</a></td>
     </tr>
 @endforeach

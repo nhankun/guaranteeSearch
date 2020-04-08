@@ -3,27 +3,26 @@
 @section('content_main')
 
 <div class="container-fluid">
-    <h1 class="mt-4">Users</h1>
+    <h1 class="mt-4">Phiếu bảo hành</h1>
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item"><a href="index.html">Admin</a></li>
-        <li class="breadcrumb-item active">users</li>
+        <li class="breadcrumb-item active">Phiếu bảo hành</li>
     </ol>
      <div class="card mb-4">
         <div class="card-header">
-            <button type="button" class="btn btn-primary"data-toggle="modal" data-target="#AddUserModal">
+            <a href="{{ route('gcs.create') }}" class="btn btn-primary">
                 <i class="fas fa-plus mr-1"></i>Thêm phiếu bảo hành
-            </button>
+            </a>
         </div>
-
-@include('admin.gcs.modalAdd')
 
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered"  width="100%" >
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Action</th>
+                            <th>Mã bảo hiểm</th>
+                            <th>Tên khách hàng</th>
+                            <th>Hành động</th>
                         </tr>
                     </thead>
                     <tbody id="pannel">

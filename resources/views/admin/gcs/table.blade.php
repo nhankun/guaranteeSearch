@@ -1,6 +1,7 @@
 @foreach($gcs as $gc)
     <tr>
-        <td>{!! $gc->start_day !!}</td>
+        <td>{!! $gc->id_guarantee !!}</td>
+        <td>{!! $gc->user->name !!}</td>
         <td></td>
     </tr>
 @endforeach

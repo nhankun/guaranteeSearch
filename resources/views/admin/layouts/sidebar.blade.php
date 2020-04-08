@@ -43,6 +43,7 @@
             <a class="nav-link" href="{{ route('users.index') }}"><div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>Người dùng</a>
             <a class="nav-link" href="{{ route('services.index') }}"><div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>Dịch vụ</a>
             <a class="nav-link" href="{{ route('doctors.index') }}"><div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>Bác sỹ</a>
+            <a class="nav-link" href="{{ route('gcs.index') }}"><div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>Phiếu bảo hành</a>
         </div>
     </div>
     <div class="sb-sidenav-footer">

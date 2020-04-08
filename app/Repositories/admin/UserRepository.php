@@ -28,7 +28,9 @@ class UserRepository
     public function update($params, $id)
     {
         $user = $this->getUserById($id);
-        $params['password'] = Hash::make($params['password']);
+        if(isset($params['password'])){
+            $params['password'] = Hash::make($params['password']);
+        }
         $params['role'] = 'user';
         return $user->update($params);
     }

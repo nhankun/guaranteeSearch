@@ -2,16 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0921029d-b514-411f-a2a9-4abff594b1d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/vn/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/doctors/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/gcs/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/services/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/DoctorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/DoctorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/ServiceControlller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/ServiceControlller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/guaranteeCertificateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/guaranteeCertificateController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/admin/UserRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/admin/UserRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/guaranteeCertificate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/guaranteeCertificate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/admin/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/admin/UserRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/admin/guaranteeCertificateRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/admin/guaranteeCertificateRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/gcs/modalAdd.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/gcs/modalAdd.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/doctors/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/doctors/table.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/gcs/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/gcs/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/gcs/modalAdd.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/gcs/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/gcs/table.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/services/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/services/table.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/modalAddUser.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/modalAddUser.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/table.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,17 +154,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/Halovi/HeritageRoad_2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/gcs" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\guaranteeSearch\app\Http\Controllers\admin" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\guaranteeSearch\resources\views\admin\gcs" />
+      <recent name="C:\xampp\htdocs\guaranteeSearch\resources\views\admin\doctors" />
       <recent name="C:\xampp\htdocs\guaranteeSearch\resources\lang\en" />
       <recent name="C:\xampp\htdocs\guaranteeSearch\resources\views\admin" />
       <recent name="C:\xampp\htdocs\guaranteeSearch\app\Repositories\admin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\guaranteeSearch\app\Http\Controllers\admin" />
     </key>
   </component>
   <component name="RunManager">
@@ -171,6 +189,7 @@
       <workItem from="1585915862428" duration="3049000" />
       <workItem from="1586089281882" duration="679000" />
       <workItem from="1586135782413" duration="17000" />
+      <workItem from="1586347736362" duration="6378000" />
     </task>
     <servers />
   </component>
@@ -186,9 +205,9 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="176" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1586135798129" />
-    <state x="477" y="246" key="com.intellij.ide.util.TipDialog" timestamp="1586135782005">
+    <state x="477" y="246" key="com.intellij.ide.util.TipDialog" timestamp="1586347754543">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="477" y="246" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1586135782005" />
+    <state x="477" y="246" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1586347754543" />
   </component>
 </project>

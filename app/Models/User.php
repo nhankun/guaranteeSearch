@@ -37,4 +37,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function guaranteeCertificates()
+    {
+        return $this->hasMany(guaranteeCertificate::class,'user_id', 'id');
+    }
 }

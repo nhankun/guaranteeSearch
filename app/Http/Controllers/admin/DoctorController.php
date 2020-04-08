@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\admin\DoctorRequest;
+use App\Models\Doctor;
 use App\Repositories\admin\DoctorRepository;
 use Illuminate\Http\Request;
 
@@ -55,7 +57,7 @@ class DoctorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(DoctorRequest $request)
     {
         $doctor = $this->repository->create($request->all());
         if ($request->ajax()){
@@ -89,7 +91,7 @@ class DoctorController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.doctors.edit',['doctor' => Doctor::findOrFail($id)]);
     }
 
     /**
@@ -99,7 +101,7 @@ class DoctorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(DoctorRequest $request, $id)
     {
         $doctor = $this->repository->update($request->all(),$id);
         if ($request->ajax()){

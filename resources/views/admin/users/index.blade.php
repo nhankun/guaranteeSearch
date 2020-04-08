@@ -10,12 +10,10 @@
     </ol>
      <div class="card mb-4">
         <div class="card-header">
-            <button type="button" class="btn btn-primary"data-toggle="modal" data-target="#AddUserModal">
+            <a href="{{ route('users.create') }}" class="btn btn-primary">
                 <i class="fas fa-plus mr-1"></i>Thêm người dùng
-            </button>
+            </a>
         </div>
-
-@include('admin.users.modalAddUser')
 
         <div class="card-body">
             <div class="table-responsive">

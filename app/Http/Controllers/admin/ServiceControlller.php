@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Http\Requests\admin\ServiceRequest;
+use App\Models\Service;
 use App\Repositories\admin\ServiceRepository;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -56,7 +58,7 @@ class ServiceControlller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ServiceRequest $request)
     {
         $service = $this->repository->create($request->all());
         if ($request->ajax()){
@@ -90,7 +92,7 @@ class ServiceControlller extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.services.edit',['service' => Service::findOrFail($id)]);
     }
 
     /**
@@ -100,7 +102,7 @@ class ServiceControlller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ServiceRequest $request, $id)
     {
         $service = $this->repository->update($request->all(),$id);
         if ($request->ajax()){

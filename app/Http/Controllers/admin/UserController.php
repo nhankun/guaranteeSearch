@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\admin\UserRequest;
+use App\Models\User;
 use App\Repositories\admin\UserRepository;
 use Illuminate\Http\Request;
 
@@ -48,7 +49,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.users.create');
     }
 
     /**
@@ -91,7 +92,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.users.edit',['user' => User::findOrFail($id)]);
     }
 
     /**

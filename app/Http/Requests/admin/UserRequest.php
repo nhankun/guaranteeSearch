@@ -30,12 +30,11 @@ class UserRequest extends FormRequest
         $id = isset($this->user) ? ','.$this->user.',' : '';
         return [
             'name' => 'required|max:255',
-            'email' => 'required',
-            'password' => 'required|min:8',
+            'email' => 'required|unique:users,email'.$id,
+            'password' => 'min:8',
             'identity_card' => 'required|unique:users,identity_card'.$id,
             'address' => 'max:255',
-            'gender' => 'required',
-            'role' => 'required'
+            'gender' => 'required'
         ];
     }
     public function messages()
@@ -52,32 +51,5 @@ class UserRequest extends FormRequest
             'gender.required' => trans('admin.users.rules.required'),
             'role.required' => trans('admin.users.rules.required'),
         ];
-    }
-
-    /**
-     * Handle a failed validation attempt.
-     *
-     * @param  \Illuminate\Contracts\Validation\Validator  $validator
-     * @return void
-     *
-     * @throws \Illuminate\Validation\ValidationException
-     */
-    protected function failedValidation(Validator $validator)
-    {
-        // throw (new ValidationException($validator))
-        //             ->errorBag($this->errorBag)
-        //             ->redirectTo($this->getRedirectUrl());
-        $errors = (new ValidationException($validator))->errors();
-        throw new HttpResponseException(
-            response()->json([
-                "success" => false,
-                "error" => true,
-                "status" => JsonResponse::HTTP_UNPROCESSABLE_ENTITY,
-                "message" => @trans('foods.basic-infos.create_fails'),
-                "data" => [
-                    'errors' => $errors
-                ]
-            ], JsonResponse::HTTP_UNPROCESSABLE_ENTITY)
-        );
     }
 }
