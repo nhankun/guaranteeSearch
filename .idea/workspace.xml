@@ -2,8 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0921029d-b514-411f-a2a9-4abff594b1d8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Repositories/SearchRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/tableSearch.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/guaranteeSearch.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/guaranteeSearch.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/guaranteeCertificateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/guaranteeCertificateController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/admin/DoctorRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/admin/DoctorRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Doctor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Doctor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/admin/guaranteeCertificateRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/admin/guaranteeCertificateRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/parameters.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/parameters.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_28_125704_create_doctors_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_28_125704_create_doctors_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/gcs/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/gcs/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/masters.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/masters.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +138,7 @@
       <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
     </include_path>
   </component>
   <component name="ProjectId" id="1a0oMHTx5PwbSE4ACFi7evhbmEC" />
@@ -130,19 +152,20 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/gcs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\guaranteeSearch\resources\views" />
+      <recent name="C:\xampp\htdocs\guaranteeSearch\app\Http\Controllers\admin" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\guaranteeSearch\resources\views\admin" />
       <recent name="C:\xampp\htdocs\guaranteeSearch\resources\views\admin\gcs" />
       <recent name="C:\xampp\htdocs\guaranteeSearch\resources\views\admin\doctors" />
       <recent name="C:\xampp\htdocs\guaranteeSearch\resources\lang\en" />
-      <recent name="C:\xampp\htdocs\guaranteeSearch\resources\views\admin" />
       <recent name="C:\xampp\htdocs\guaranteeSearch\app\Repositories\admin" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\guaranteeSearch\app\Http\Controllers\admin" />
     </key>
   </component>
   <component name="RunManager">
@@ -166,6 +189,9 @@
       <workItem from="1586089281882" duration="679000" />
       <workItem from="1586135782413" duration="17000" />
       <workItem from="1586347736362" duration="7022000" />
+      <workItem from="1586484177987" duration="246000" />
+      <workItem from="1586518705948" duration="3358000" />
+      <workItem from="1586574255504" duration="7000000" />
     </task>
     <servers />
   </component>
@@ -173,17 +199,17 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="499" y="176" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1585903689432">
+    <state x="499" y="176" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586581094489">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="499" y="176" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.834@0.0.1536.834" timestamp="1585903689432" />
-    <state x="549" y="176" key="FileChooserDialogImpl" timestamp="1586135798129">
+    <state x="499" y="176" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.834@0.0.1536.834" timestamp="1586581094489" />
+    <state x="549" y="176" key="FileChooserDialogImpl" timestamp="1586484421987">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="549" y="176" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1586135798129" />
-    <state x="477" y="246" key="com.intellij.ide.util.TipDialog" timestamp="1586347754543">
+    <state x="549" y="176" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1586484421987" />
+    <state x="477" y="246" key="com.intellij.ide.util.TipDialog" timestamp="1586574289635">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="477" y="246" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1586347754543" />
+    <state x="477" y="246" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1586574289635" />
   </component>
 </project>

@@ -25,6 +25,12 @@ return [
         'direction' => 'desc',
         'search' => '',
         'status'=>'',
+    ],
+    'search' => [
+        'order' => 'id',
+        'direction' => 'desc',
+        'search' => '',
+        'status'=>'',
     ]
 
 ];

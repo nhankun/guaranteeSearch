@@ -234,12 +234,13 @@ return [
             'users' => 1,
             'services' => 1,
             'doctors' => 1,
-            'gcs' => 1
+            'gcs' => 1,
+            'search' => 1
         ],
     ],
 
     'roles' => [
-        'admin',
-        'user'
+        1 => 'admin',
+        2 => 'user'
     ],
 ];

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\admin;
+namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class DoctorRequest extends FormRequest
+class SearchRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,9 +23,8 @@ class DoctorRequest extends FormRequest
      */
     public function rules()
     {
-        $id = isset($this->doctor) ? ','.$this->doctor.',' : '';
         return [
-            'name_doctor' => 'required|unique:doctors,name'.$id,
+            //
         ];
     }
 }

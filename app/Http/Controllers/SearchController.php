@@ -1,23 +1,19 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\admin\gcsRequest;
-use App\Models\Doctor;
-use App\Models\Service;
-use App\Models\User;
 use App\Repositories\admin\guaranteeCertificateRepository;
+use App\Repositories\SearchRepository;
 use Illuminate\Http\Request;
 
-class guaranteeCertificateController extends Controller
+class SearchController extends Controller
 {
     private $repository;
 
-    public function __construct(guaranteeCertificateRepository $repository)
+    public function __construct(SearchRepository $repository)
     {
         $this->repository = $repository;
-        $this->table = 'gcs';
+        $this->table = 'search';
     }
     /**
      * Display a listing of the resource.
@@ -35,12 +31,12 @@ class guaranteeCertificateController extends Controller
         // Ajax response
         if ($request->ajax()) {
             return response ()->json ([
-                'table' => view ("admin.gcs.table", ["gcs" => $records])->render (),
+                'table' => view ("tableSearch", ["results" => $records])->render (),
                 'pagination' => $links->toHtml (),
             ]);
         }
 
-        return view ("admin.gcs.index", ["gcs" => $records, 'links' => $links]);
+        return view ("welcome");
     }
 
     /**
@@ -50,8 +46,7 @@ class guaranteeCertificateController extends Controller
      */
     public function create()
     {
-        $services = Service::all();
-        return view('admin.gcs.create',compact('services'));
+        //
     }
 
     /**
@@ -62,18 +57,7 @@ class guaranteeCertificateController extends Controller
      */
     public function store(Request $request)
     {
-//        dd($request->all());
-        $gc = $this->repository->create($request);
-        if ($request->ajax()){
-            return response()->json([
-                'success' => true,
-                'error' => false,
-                'data' => [
-                    'gc' => $gc
-                ]
-            ]);
-        }
-        return redirect()->route('gcs.index');
+        //
     }
 
     /**
@@ -107,17 +91,7 @@ class guaranteeCertificateController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $gc = $this->repository->update($request->all(),$id);
-        if ($request->ajax()){
-            return response()->json([
-                'success' => true,
-                'error' => false,
-                'data' => [
-                    'gc' => $gc
-                ]
-            ]);
-        }
-        return redirect()->route('gcs.index');
+        //
     }
 
     /**
@@ -130,6 +104,7 @@ class guaranteeCertificateController extends Controller
     {
         //
     }
+
     protected function getParameters($request)
     {
         // Default parameters

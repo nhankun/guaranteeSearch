@@ -8,6 +8,9 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+{{--        <script src="{{ asset('js/app.js') }}" defer></script>--}}
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
 
         <!-- Styles -->
         <style>
@@ -85,16 +88,61 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <div class="form-inline">
+                        <input type="text" class="form-control" id="search" name="search" placeholder="Tìm kiếm theo số cmnd hoặc mã bảo hành">
+                        <button class="btn btn-info" id="btnsearch">Tìm kiếm</button>
+                    </div>
                 </div>
+                    <div class="table-responsive" id="pannel">
+
+                        <div id="pagination" style="padding-right: 0px">
+                            {!! (isset($links)) ? $links : '' !!}
+                        </div>
+                    </div>
             </div>
         </div>
     </body>
+    <script src="{{asset('js/back.js')}}"></script>
+    <script>
+        var users = (function () {
+
+            var url = '/search'
+            var title = "Do you want delete"
+            var cancelButtonText ="Cancel"
+            var confirmButtonText = "yes"
+            var errorAjax = "Error"
+                {{--var errorDelete = "{{trans('members.error_delete')}}"--}}
+
+            var onReady = function () {
+                    $('#pagination').on('click', 'ul.pagination a', function (event) {
+                        back.pagination(event, $(this), errorAjax)
+                    })
+                    // $('#pannel').on('change', function () {
+                    // })
+                    //     .on('click','.simpleConfirm', function (event) {
+                    //         // back.destroy(event, $(this), url, title, confirmButtonText, cancelButtonText, errorDelete)
+                    //     })
+                    $('th span').click(function () {
+                        back.ordering(url, $(this), errorAjax)
+                    })
+                    $('#btnsearch').click(function () {
+                        back.filters(url, errorAjax)
+                    })
+                    $('#search').keypress(function(event){
+                        var keycode = (event.keyCode ? event.keyCode : event.which);
+                        if(keycode == '13'){
+                            event.preventDefault();
+                            $('#btnsearch').focus().click();
+                        }
+                    })
+                }
+
+            return {
+                onReady: onReady
+            }
+
+        })()
+
+        $(document).ready(users.onReady)
+    </script>
 </html>

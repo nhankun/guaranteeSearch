@@ -1,7 +1,11 @@
 <?php
 namespace App\Repositories\admin;
 
+use App\Models\Doctor;
 use App\Models\guaranteeCertificate;
+use App\Models\Service;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class guaranteeCertificateRepository
 {
@@ -21,6 +25,10 @@ class guaranteeCertificateRepository
     {
         $params = $request->all();
         $params['id_guarantee'] = 'VIN-'.$params['id_guarantee'];
+        $params['password'] = Hash::make('12345678');
+        $params['role'] = config('app.roles.2');
+        $params['user_id'] = User::create($params)->id;
+        $params['doctor_id'] = Doctor::create($params)->id;
         $gcs = guaranteeCertificate::create($params);
 
         $image_before = $this->uploadImage($request->file('image_before'),$gcs->id,'image_before');
