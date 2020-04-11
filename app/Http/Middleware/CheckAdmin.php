@@ -16,9 +16,12 @@ class CheckAdmin
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::check() && Auth::user()->role == config('app.roles.1')) {
-            return $next($request);
+        if (Auth::check()){
+            if (Auth::user()->role == config('app.roles.1')) {
+                return $next($request);
+            }
+            return redirect('/');
         }
-        return redirect('/');
+        return redirect('/login');
     }
 }
